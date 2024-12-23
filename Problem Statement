@@ -1,0 +1,28 @@
+Problem Statement:
+The task is to extract user information provided in natural language into a well-structured JSON format, validate the presence of mandatory fields, and identify missing or incorrect data for follow-up actions.
+The required fields include:
+	•	Name
+	•	ID
+	•	Email
+	•	Contact Number
+	•	Profile URL
+	•	Experience (in years or descriptions)
+	•	Department (one of: IT, Engineer, Developer, UI/UX, QA)
+	•	Age Range (one of: 18-24, 25-34, 35-44, 45-54, 55-64, 65-74, 75+)
+Input Example:
+A user might provide details like:
+My name is John Doe. I have 5 years of experience as a developer in the IT department. I'm 29 years old. My ID is 12345, email is john.doe@gmail.com, and my contact number is +1234567890. My LinkedIn profile is https://linkedin.com/in/johndoe.
+Expected Output in JSON:
+{
+  "user": {
+    "name": "John Doe",
+    "id": "12345",
+    "email": "john.doe@gmail.com",
+    "contact": "+1234567890",
+    "profileUrl": "https://linkedin.com/in/johndoe",
+    "experience": "5 years",
+    "department": "Developer",
+    "ageRange": "25-34"
+  },
+  "nextStep": "Validate mandatory fields and request missing details."
+}
